@@ -23,7 +23,7 @@ export const Navbar = () => {
             href="/"
           >
             <Logo />
-            <p className="font-bold text-inherit ">Blazer</p>
+            <p className="font-bold text-inherit">Blazer</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -33,7 +33,7 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={
-                  "data-[active=true]:text-primary data-[active=true]:font-medium font-extrabold text-black"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-black"
                 }
                 color="foreground"
                 href={item.href}
@@ -46,7 +46,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle />
+        <NavbarMenuToggle className="text-black" />
       </NavbarContent>
 
       <NavbarMenu>
