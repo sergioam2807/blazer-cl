@@ -33,7 +33,8 @@ const cardData = [
 export default function Home() {
   return (
     <>
-      <div className="relative w-full">
+      {/* Solo visible en mobile */}
+      <div className="sm:hidden relative w-full">
         <Image
           alt="Andamio"
           className="w-full opacity-30"
@@ -58,12 +59,47 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Solo visible en desktop */}
+      <div className="hidden sm:flex w-full flex-col sm:flex-row relative mb-16">
+        <div className="w-full sm:w-1/2 relative">
+          <Image
+            alt="Andamio"
+            className="w-full h-[400px] object-cover opacity-70 rounded-xl"
+            height={400}
+            src={andamio}
+            width={400}
+          />
+          <div className="absolute top-0 left-0 w-12 h-1 bg-yellow-500 rounded-tl-lg" />
+          <div className="absolute top-0 left-0 w-1 h-12 bg-yellow-500 rounded-tl-lg" />
+
+          {/* Esquina inferior derecha */}
+          <div className="absolute bottom-0 right-0 w-12 h-1 bg-yellow-500 rounded-br-lg" />
+          <div className="absolute bottom-0 right-0 w-1 h-12 bg-yellow-500 rounded-br-lg" />
+          {/* <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/90 to-transparent" /> */}
+        </div>
+
+        <div className="w-full sm:w-1/2 flex flex-col items-center justify-center px-7 py-10 relative z-10">
+          <FadeInSection />
+          <div className="w-full flex justify-end">
+            <Button
+              as={Link}
+              className="mt-12"
+              color="warning"
+              href="https://github.com/heroui-inc/heroui"
+              variant="bordered"
+            >
+              Contacto
+            </Button>
+          </div>
+        </div>
+      </div>
+
       <section className=" flex flex-col items-center justify-center gap-4">
         <div className="relative w-full">
-          <div className="absolute top-9 left-0 h-64 w-0.5 bg-yellow-500 ml-4 " />
-          <div className="absolute top-0 left-2 w-72 h-0.5 bg-yellow-500 mt-12" />
+          <div className="absolute top-9 left-0 sm:-left-20 sm:-top-2 h-64 w-0.5 bg-yellow-500 ml-4 " />
+          <div className="absolute top-0 left-2 sm:-left-20 sm:-top-10 w-72 h-0.5 bg-yellow-500 mt-12" />
 
-          <div className="bg-black w-full text-start py-12 px-8">
+          <div className="bg-black w-full text-start py-12 px-8 sm:mb-16">
             <SubText />
 
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
@@ -78,13 +114,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-3 right-0 h-64 w-0.5 bg-yellow-500 mr-4 z-10" />
-          <div className="absolute -bottom-7 right-2 w-72 h-0.5 bg-yellow-500 mb-12 z-10" />
+          <div className="absolute bottom-3 right-0 sm:-bottom-3 sm:-right-20 h-64 w-0.5 bg-yellow-500 mr-4 z-10" />
+          <div className="absolute -bottom-7 right-2 sm:-bottom-12 sm:-right-20 w-72 h-0.5 bg-yellow-500 mb-12 z-10" />
         </div>
-        <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center ">
+        <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center sm:mt-16">
           <Slider />
         </div>
       </section>
+      <div className="hidden lg:block w-full">
+        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            fill="#eab308"
+            fillOpacity="0.9"
+          />
+        </svg>
+      </div>
       <Ofrecemos />
       <footer className="bg-black text-white py-10">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
