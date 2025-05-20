@@ -46,7 +46,7 @@ export function Ofrecemos() {
       <div className="absolute inset-0 bg-yellow-500/90 -z-10" />
       <h2 className="text-3xl font-bold text-center mb-6">¿Qué ofrecemos?</h2>
       <motion.p
-        className="text-center max-w-2xl mx-auto mb-10 text-white text-bold"
+        className="text-center max-w-2xl mx-auto mb-10 text-white font-bold"
         initial={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
