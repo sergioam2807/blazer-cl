@@ -96,8 +96,8 @@ export default function Home() {
 
       <section className=" flex flex-col items-center justify-center gap-4">
         <div className="relative w-full">
-          <div className="absolute top-9 left-0 sm:-left-20 sm:-top-2 h-64 w-0.5 bg-yellow-500 ml-4 " />
-          <div className="absolute top-0 left-2 sm:-left-20 sm:-top-10 w-72 h-0.5 bg-yellow-500 mt-12" />
+          <div className="absolute top-9 left-0 sm:-left-3 sm:-top-2 h-64 w-0.5 bg-yellow-500 ml-4 " />
+          <div className="absolute top-0 left-2 sm:-left-3 sm:-top-10 w-72 h-0.5 bg-yellow-500 mt-12" />
 
           <div className="bg-black w-full text-start py-12 px-8 sm:mb-16">
             <SubText />
@@ -114,8 +114,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="absolute bottom-3 right-0 sm:-bottom-3 sm:-right-20 h-64 w-0.5 bg-yellow-500 mr-4 z-10" />
-          <div className="absolute -bottom-7 right-2 sm:-bottom-12 sm:-right-20 w-72 h-0.5 bg-yellow-500 mb-12 z-10" />
+          <div className="absolute bottom-3 right-0 sm:-bottom-3 sm:-right-2 h-64 w-0.5 bg-yellow-500 mr-4 z-10" />
+          <div className="absolute -bottom-7 right-2 sm:-bottom-12 sm:-right-2 w-72 h-0.5 bg-yellow-500 mb-12 z-10" />
         </div>
         <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center sm:mt-16 sm:-mb-24">
           <Slider />
