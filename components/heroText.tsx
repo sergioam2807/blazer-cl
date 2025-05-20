@@ -34,7 +34,7 @@ export function SubText() {
         initial={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Servicios rápidos, seguros y a medida de tu obra.
+        Servicios rápidos, seguros y a la medida de tu obra.
       </motion.h2>
     </div>
   );
