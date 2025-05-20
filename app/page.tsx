@@ -117,7 +117,7 @@ export default function Home() {
           <div className="absolute bottom-3 right-0 sm:-bottom-3 sm:-right-20 h-64 w-0.5 bg-yellow-500 mr-4 z-10" />
           <div className="absolute -bottom-7 right-2 sm:-bottom-12 sm:-right-20 w-72 h-0.5 bg-yellow-500 mb-12 z-10" />
         </div>
-        <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center sm:mt-16">
+        <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center sm:mt-16 sm:-mb-24">
           <Slider />
         </div>
       </section>
