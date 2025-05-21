@@ -99,7 +99,7 @@ export function Ofrecemos() {
             return (
               <>
                 {/* Mobile: muestra los dos últimos normalmente */}
-                <div key={idx} className="w-full lg:hidden">
+                <div key={`${idx + item.title}`} className="w-full lg:hidden">
                   <AnimatedCard
                     delay={idx * 0.15}
                     img={item.img}
