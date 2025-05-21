@@ -98,8 +98,7 @@ export function Ofrecemos() {
           if (isLastTwoStart) {
             return (
               <>
-                {/* Mobile: muestra los dos últimos normalmente */}
-                <div key={`${idx + item.title}`} className="w-full lg:hidden">
+                <div key={`mobile-last-1-${idx}`} className="w-full lg:hidden">
                   <AnimatedCard
                     delay={idx * 0.15}
                     img={item.img}
@@ -107,7 +106,10 @@ export function Ofrecemos() {
                     title={item.title}
                   />
                 </div>
-                <div key={idx + 1} className="w-full lg:hidden">
+                <div
+                  key={`mobile-last-2-${idx + 1}`}
+                  className="w-full lg:hidden"
+                >
                   <AnimatedCard
                     delay={(idx + 1) * 0.15}
                     img={arr[idx + 1].img}
@@ -115,13 +117,16 @@ export function Ofrecemos() {
                     title={arr[idx + 1].title}
                   />
                 </div>
-                {/* Desktop: centrado especial */}
+
                 <div
-                  key="last-two"
+                  key={`desktop-last-two-${idx}`}
                   className="col-span-full hidden lg:flex justify-around gap-8"
                 >
                   {[item, arr[idx + 1]].map((cardItem, i) => (
-                    <div key={idx + i} className="w-full lg:w-[32%]">
+                    <div
+                      key={`desktop-card-${idx + i}`}
+                      className="w-full lg:w-[32%]"
+                    >
                       <AnimatedCard
                         delay={(idx + i) * 0.15}
                         img={cardItem.img}
@@ -135,13 +140,12 @@ export function Ofrecemos() {
             );
           }
 
-          // Evita duplicar el último en mobile
           const isLastExtra = arr.length % 3 === 2 && idx === arr.length - 1;
 
           if (isLastExtra) return null;
 
           return (
-            <div key={idx} className="w-full">
+            <div key={`normal-card-${idx}`} className="w-full">
               <AnimatedCard
                 delay={idx * 0.15}
                 img={item.img}
