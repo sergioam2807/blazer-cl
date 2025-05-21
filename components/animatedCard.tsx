@@ -18,7 +18,7 @@ export default function AnimatedCard({
   delay = 0,
 }: AnimatedCardProps) {
   return (
-    <motion.button
+    <motion.div
       className="transition-transform duration-300"
       initial={{ opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay }}
@@ -27,21 +27,17 @@ export default function AnimatedCard({
     >
       <Card className="py-4 hover:scale-105 hover:opacity-80 transition-all duration-300">
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
-          <h4 className="font-bold text-large text-center">{title}</h4>
+          <h4 className="font-bold text-large text-center mb-2 sm:text-xl">
+            {title}
+          </h4>
         </CardHeader>
         <CardBody className="overflow-visible py-2 flex flex-col items-center">
-          <Image
-            alt="Card background"
-            className="object-cover rounded-md"
-            height={250}
-            src={img}
-            width={250}
-          />
-          <p className="text-tiny uppercase font-bold pt-2 text-center px-4">
+          <Image alt="Card background" height={250} src={img} width={300} />
+          <p className="text-sm font-bold pt-2 text-center px-4 mt-4 sm:text-medium">
             {subtitle}
           </p>
         </CardBody>
       </Card>
-    </motion.button>
+    </motion.div>
   );
 }

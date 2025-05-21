@@ -63,22 +63,22 @@ export function Ofrecemos() {
       <div className="grid grid-cols-1 px-8 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {[
           {
-            title: "Arriendo de Andamios",
+            title: "Experiencia",
             description:
-              "Colgantes eléctricos y fijos certificados para alturas de hasta 200 metros.",
+              "Más de 11 años en el mercado, brindando soluciones efectivas.",
             img: "card-images/andamio-colgante-card.jpg",
           },
           {
-            title: "Herramientas de Construcción",
+            title: "Múltiples Clientes",
             description:
-              "Martillos demoledores, aspiradoras y más, en óptimas condiciones.",
-            img: "card-images/herramientas.jpg",
+              "Confianza de empresas líderes en el sector de la construcción.",
+            img: "card-images/clientes.jpg",
           },
           {
-            title: "Perforación con Testiguera",
+            title: "Trabajos de Calidad",
             description:
-              "Obtención de muestras geotécnicas con equipos especializados.",
-            img: "card-images/perforacion.jpg",
+              "Proyectos exitosos garantizados por nuestro equipo especializado.",
+            img: "card-images/calidad.jpg",
           },
           {
             title: "Sevicio de Transporte",
@@ -87,10 +87,10 @@ export function Ofrecemos() {
             img: "card-images/transporte.jpg",
           },
           {
-            title: "Certificaciones de Seguridad",
+            title: "Buen Stock de Productos",
             description:
-              "Equipos certificados y seguros para trabajos en altura.",
-            img: "card-images/certificacion.jpg",
+              "Disponibilidad inmediata de andamios y maquinarias para su proyecto.",
+            img: "card-images/stock.jpg",
           },
         ].map((item, idx, arr) => {
           const isLastTwoStart = arr.length % 3 === 2 && idx === arr.length - 2;
