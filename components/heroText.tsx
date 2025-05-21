@@ -22,7 +22,7 @@ export function SubText() {
     <div className="flex flex-col items-center justify-center gap-4">
       <motion.h2
         animate={{ opacity: 1, y: 0 }}
-        className="text-start text-2xl font-bold mt-8 sm:text-4xl "
+        className="text-start text-2xl font-extrabold mt-8 sm:text-4xl "
         initial={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
@@ -30,7 +30,7 @@ export function SubText() {
       </motion.h2>
       <motion.h2
         animate={{ opacity: 1, y: 0 }}
-        className="text-white text-2xl font-bold sm:text-4xl sm:mb-10"
+        className="text-white text-2xl sm:mb-10 sm:text-3xl font-extralight"
         initial={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >

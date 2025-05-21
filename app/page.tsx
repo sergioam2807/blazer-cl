@@ -30,6 +30,33 @@ const cardData = [
   },
 ];
 
+const serviciosData = [
+  {
+    title: "Andamios Colgantes",
+    text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 200 metros.",
+    icon: "/icons/colgante.png",
+    url: "/andamios-colgantes",
+  },
+  {
+    title: "Andamios Fijos",
+    text: "Arriendo de Andamios fijos para trabajos en altura, con certificación y seguridad garantizada.",
+    icon: "/icons/andamio.png",
+    url: "/andamios-fijos",
+  },
+  {
+    title: "Servicios de Perforación",
+    text: "Perforación con testiguera para obtención de muestras geotécnicas.",
+    icon: "/icons/perforacion.png",
+    url: "/perforacion",
+  },
+  {
+    title: "Servicios de Transporte",
+    text: "Transporte de equipos y materiales a cualquier lugar del país.",
+    icon: "/icons/transporte.png",
+    url: "/transporte",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -103,12 +130,13 @@ export default function Home() {
             <SubText />
 
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-              {cardData.map((card, index) => (
+              {serviciosData.map((card, index) => (
                 <CardComponent
                   key={index}
                   icon={card.icon}
                   text={card.text}
                   title={card.title}
+                  url={card.url}
                 />
               ))}
             </div>
@@ -121,73 +149,7 @@ export default function Home() {
           <Slider />
         </div>
       </section>
-      {/* <div className="hidden lg:block w-full">
-        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            fill="#eab308"
-            fillOpacity="0.9"
-          />
-        </svg>
-      </div> */}
       <Ofrecemos />
-      <footer className="bg-black text-white py-10">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div>
-            <div className="w-fit">
-              <h4 className="font-bold text-yellow-500 text-lg mb-1">
-                Blazer Ltda.
-              </h4>
-              <div className="h-0.5 bg-yellow-500 w-full rounded" />
-            </div>
-            <br className="mt-1 h-2 w-1/2 bg-yellow-500" />
-            <p className="font-bold">
-              Soluciones para la construcción desde 2014
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">Contacto</h4>
-            <p>Blazer.ltda@gmail.com</p>
-            <p>+56 9 1234 5678</p>
-            <p>Viña del mar, Chile</p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">Síguenos</h4>
-            <div className="flex gap-3">
-              <Link
-                href="https://www.facebook.com/p/Blazer-Andamios-100008934150281/?locale=es_LA"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="Facebook"
-                  className="hover:opacity-80 transition-opacity filter invert"
-                  height={28}
-                  src="/facebook.png"
-                  width={28}
-                />
-              </Link>
-              <Link
-                href="https://www.instagram.com/serviciosblazerltda?igsh=cmd4dW04enlvaGVn"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Image
-                  alt="Instagram"
-                  className="hover:opacity-80 transition-opacity filter invert"
-                  height={28}
-                  src="/instagram.png"
-                  width={28}
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-        <p className="text-center mt-8 text-sm text-gray-400">
-          © {new Date().getFullYear()} Blazer Ltda. Todos los derechos
-          reservados.
-        </p>
-      </footer>
     </>
   );
 }
