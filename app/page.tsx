@@ -7,29 +7,6 @@ import FadeInSection, { SubText, Ofrecemos } from "@/components/heroText";
 import Slider from "@/components/slider";
 import CardComponent from "@/components/cardComponent";
 
-const cardData = [
-  {
-    title: "Experiencia",
-    text: "Más de 11 años en el mercado",
-    icon: "/icons/experiencia.png",
-  },
-  {
-    title: "Múltiples Clientes",
-    text: "Confianza de empresas líderes",
-    icon: "/icons/clientes.png",
-  },
-  {
-    title: "Trabajos de Calidad",
-    text: "Proyectos exitosos garantizados",
-    icon: "/icons/calidad.png",
-  },
-  {
-    title: "Buen Stock de Productos",
-    text: "Disponibilidad inmediata",
-    icon: "/icons/stock.png",
-  },
-];
-
 const serviciosData = [
   {
     title: "Andamios Colgantes",

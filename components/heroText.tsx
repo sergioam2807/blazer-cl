@@ -97,24 +97,45 @@ export function Ofrecemos() {
 
           if (isLastTwoStart) {
             return (
-              <div
-                key="last-two"
-                className="col-span-full hidden lg:flex justify-around gap-8"
-              >
-                {[item, arr[idx + 1]].map((cardItem, i) => (
-                  <div key={idx + i} className="w-full lg:w-[32%]">
-                    <AnimatedCard
-                      delay={(idx + i) * 0.15}
-                      img={cardItem.img}
-                      subtitle={cardItem.description}
-                      title={cardItem.title}
-                    />
-                  </div>
-                ))}
-              </div>
+              <>
+                {/* Mobile: muestra los dos últimos normalmente */}
+                <div key={idx} className="w-full lg:hidden">
+                  <AnimatedCard
+                    delay={idx * 0.15}
+                    img={item.img}
+                    subtitle={item.description}
+                    title={item.title}
+                  />
+                </div>
+                <div key={idx + 1} className="w-full lg:hidden">
+                  <AnimatedCard
+                    delay={(idx + 1) * 0.15}
+                    img={arr[idx + 1].img}
+                    subtitle={arr[idx + 1].description}
+                    title={arr[idx + 1].title}
+                  />
+                </div>
+                {/* Desktop: centrado especial */}
+                <div
+                  key="last-two"
+                  className="col-span-full hidden lg:flex justify-around gap-8"
+                >
+                  {[item, arr[idx + 1]].map((cardItem, i) => (
+                    <div key={idx + i} className="w-full lg:w-[32%]">
+                      <AnimatedCard
+                        delay={(idx + i) * 0.15}
+                        img={cardItem.img}
+                        subtitle={cardItem.description}
+                        title={cardItem.title}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </>
             );
           }
 
+          // Evita duplicar el último en mobile
           const isLastExtra = arr.length % 3 === 2 && idx === arr.length - 1;
 
           if (isLastExtra) return null;

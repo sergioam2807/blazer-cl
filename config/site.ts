@@ -11,7 +11,7 @@ export const siteConfig = {
     },
     {
       label: "Nosotros",
-      href: "/Nosotros",
+      href: "/nosotros",
     },
     {
       label: "Servicios",
@@ -29,8 +29,7 @@ export const siteConfig = {
     },
     {
       label: "Nosotros",
-
-      href: "/Nosotros",
+      href: "/nosotros",
     },
     {
       label: "Servicios",
