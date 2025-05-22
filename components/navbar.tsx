@@ -27,22 +27,45 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="sm:basis-full" justify="center">
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
+      <NavbarContent
+        className="sm:basis-full flex justify-center items-center"
+        justify="center"
+      >
+        {siteConfig.navItems.map((item) =>
+          item.subItems ? (
+            <li key={item.href} className="relative group px-3 py-2">
+              <div className="inline-block">
+                <button className="font-bold text-black bg-transparent hover:text-gray-600">
+                  {item.label}
+                </button>
+              </div>
+
+              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg z-50 min-w-[250px]">
+                <ul className="py-2">
+                  {item.subItems.map((sub) => (
+                    <li key={sub.href}>
+                      <NextLink
+                        className="block px-4 py-2 text-black hover:bg-gray-100"
+                        href={sub.href}
+                      >
+                        {sub.label}
+                      </NextLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ) : (
             <NavbarItem key={item.href}>
               <NextLink
-                className={
-                  "data-[active=true]:text-primary data-[active=true]:font-medium font-bold text-black"
-                }
-                color="foreground"
+                className="font-bold text-black hover:text-gray-600"
                 href={item.href}
               >
                 {item.label}
               </NextLink>
             </NavbarItem>
-          ))}
-        </ul>
+          )
+        )}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

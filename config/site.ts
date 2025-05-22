@@ -16,6 +16,21 @@ export const siteConfig = {
     {
       label: "Servicios",
       href: "/servicios",
+      subItems: [
+        {
+          label: "Arriendo Andamios Colgantes",
+          href: "/servicios/andamios-colgantes",
+        },
+        { label: "Arriendo Andamios Fijos", href: "/servicios/andamios-fijos" },
+        {
+          label: "Servicios de Perforación con Testiguera",
+          href: "/servicios/perforacion",
+        },
+        {
+          label: "Servicio de Transporte (Cargas Generales)",
+          href: "/servicios/transporte",
+        },
+      ],
     },
     {
       label: "Contacto",
