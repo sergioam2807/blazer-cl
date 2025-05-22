@@ -12,25 +12,25 @@ const serviciosData = [
     title: "Andamios Colgantes",
     text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 200 metros.",
     icon: "/icons/colgante.png",
-    url: "/andamios-colgantes",
+    url: "servicios/andamios-colgantes",
   },
   {
     title: "Andamios Fijos",
     text: "Arriendo de Andamios fijos para trabajos en altura, con certificación y seguridad garantizada.",
     icon: "/icons/andamio.png",
-    url: "/andamios-fijos",
+    url: "servicios/andamios-fijos",
   },
   {
     title: "Servicios de Perforación",
     text: "Perforación con testiguera para obtención de muestras geotécnicas.",
     icon: "/icons/perforacion.png",
-    url: "/perforacion",
+    url: "servicios/perforacion",
   },
   {
     title: "Servicios de Transporte",
     text: "Transporte de equipos y materiales a cualquier lugar del país.",
     icon: "/icons/transporte.png",
-    url: "/transporte",
+    url: "servicios/transporte",
   },
 ];
 
