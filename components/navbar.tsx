@@ -40,12 +40,12 @@ export const Navbar = () => {
                 </button>
               </div>
 
-              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-lg z-50 min-w-[250px]">
+              <div className="absolute left-0 mt-2 pt-0 hidden group-hover:block bg-black/90 shadow-lg rounded-br-lg rounded-bl-lg rounded-tr-lg z-50 min-w-[400px]">
                 <ul className="py-2">
                   {item.subItems.map((sub) => (
                     <li key={sub.href}>
                       <NextLink
-                        className="block px-4 py-2 text-black hover:bg-gray-100"
+                        className="block px-4 py-2 text-gray-100 hover:bg-gray-900 font-semibold"
                         href={sub.href}
                       >
                         {sub.label}
