@@ -28,7 +28,7 @@ export const Navbar = () => {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent
-        className="hidden lg:flex sm:basis-full flex justify-center items-center"
+        className="hidden lg:flex sm:basis-full justify-center items-center"
         justify="center"
       >
         {siteConfig.navItems.map((item) =>
