@@ -1,0 +1,63 @@
+import React from "react";
+import Image from "next/image";
+
+import SmallCard from "./smallCard";
+import ListPage from "./listPage";
+import HeaderPageTitle from "./headerPageTitle";
+
+export const PageComponent = ({
+  title,
+  subtitle,
+  images,
+  descripcion,
+  caracteristicas,
+  calidad,
+}: {
+  title: string;
+  subtitle: string;
+  images: { src: string; alt: string }[];
+  descripcion: string;
+  caracteristicas: { title: string }[];
+  calidad: { titulo: string; items: { title: string }[] };
+}) => {
+  return (
+    <div className="w-full flex items-start text-start px-4 py-10 flex-col gap-8">
+      <HeaderPageTitle pageTitle={title} />
+
+      <p className="text-2xl font-extrabold leading-snug">{subtitle}</p>
+      <div className="flex gap-4 justify-center w-full">
+        {images.map((img, i) => (
+          <Image
+            key={i}
+            alt={img.alt}
+            className="w-full object-cover opacity-70 rounded-xl"
+            height={150}
+            src={img.src}
+            width={150}
+          />
+        ))}
+      </div>
+      <div className="text-start flex flex-col gap-4 text-lg font-bold">
+        <p className="text-md font-light text-justify">{descripcion}</p>
+      </div>
+
+      <div className="w-full bg-yellow-500 py-8">
+        <div className="flex flex-col gap-4 text-white">
+          <h2 className="text-4xl font-extrabold leading-snug text-center my-6">
+            Características
+          </h2>
+          <div className="w-full flex flex-col gap-4">
+            <ListPage caracteristicas={caracteristicas} />
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full text-start flex flex-col gap-4 text-lg font-bold">
+        <h2 className="text-4xl font-extrabold leading-snug text-center my-6">
+          {calidad.titulo}
+        </h2>
+        <SmallCard list={calidad.items} />
+      </div>
+    </div>
+  );
+};

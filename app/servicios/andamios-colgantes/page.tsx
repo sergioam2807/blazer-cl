@@ -1,67 +1,52 @@
-import Image from "next/image";
+import { PageComponent } from "@/components/pageComponent";
 
-import HeaderPageTitle from "@/components/headerPageTitle";
-import ListPage from "@/components/listPage";
-import SmallCard from "@/components/smallCard";
-
-const caracteristicas = [
-  "Fácil instalación y desmontaje.",
-  "Acceso seguro a áreas de difícil acceso.",
-  "Diseño modular y versátil.",
-  "Capacidad de carga adecuada para trabajos pesados.",
-  "Estabilidad y seguridad garantizadas.",
-];
+const andamiosColgantesData = {
+  title: "Andamios Colgantes",
+  subtitle: "Andamios colgantes para trabajos en altura.",
+  images: [
+    { src: "/andamio-colgante.jpg", alt: "Andamio" },
+    { src: "/andamio-colgante.jpg", alt: "Andamio" },
+  ],
+  descripcion: `Solución versátil y eficiente para trabajos en altura. Acceso seguro y cómodo a áreas de difícil acceso, como fachadas de edificios, techos y estructuras industriales. Ideales para trabajos de mantenimiento, limpieza, pintura y construcción.`,
+  caracteristicas: [
+    { title: "Fácil instalación y desmontaje." },
+    { title: "Acceso seguro a áreas de difícil acceso." },
+    { title: "Diseño modular y versátil." },
+    { title: "Capacidad de carga adecuada para trabajos pesados." },
+    { title: "Estabilidad y seguridad garantizadas." },
+  ],
+  calidad: {
+    titulo: "Calidad Garantizada y Seguridad Comprobada",
+    items: [
+      {
+        title: "Certificados",
+        img: "/icons/certified.svg",
+      },
+      {
+        title: "Confiabilidad",
+        img: "/icons/trust.svg",
+      },
+      {
+        title: "Calidad",
+        img: "/icons/star.svg",
+      },
+      {
+        title: "Seguridad",
+        img: "/icons/security.svg",
+      },
+    ],
+  },
+};
 
 export default function AndamiosColgantesPage() {
   return (
-    <div className="w-full flex items-start text-start px-4 py-10 flex-col gap-8">
-      <HeaderPageTitle pageTitle="Andamios Colgantes" />
-
-      <p className="text-2xl font-extrabold leading-snug">
-        Andamios colgantes para trabajos en altura.
-      </p>
-      <div className="flex gap-4 justify-center w-full">
-        <Image
-          alt="Andamio"
-          className="w-full object-cover opacity-70 rounded-xl"
-          height={150}
-          src="/andamio-colgante.jpg"
-          width={150}
-        />
-        <Image
-          alt="Andamio"
-          className="w-full  object-cover opacity-70 rounded-xl"
-          height={150}
-          src="/andamio-colgante.jpg"
-          width={150}
-        />
-      </div>
-      <div className="text-start flex flex-col gap-4 text-lg font-bold">
-        <p className="text-md font-light text-justify">
-          Solución versátil y eficiente para trabajos en altura. Acceso seguro y
-          cómodo a áreas de difícil acceso, como fachadas de edificios, techos y
-          estructuras industriales. Ideales para trabajos de mantenimiento,
-          limpieza, pintura y construcción.
-        </p>
-      </div>
-
-      <div className="w-full bg-yellow-500 py-8">
-        <div className="flex flex-col gap-4 text-white">
-          <h2 className="text-4xl font-extrabold leading-snug text-center my-6">
-            Características
-          </h2>
-          <div className="w-full flex flex-col gap-4">
-            <ListPage caracteristicas={caracteristicas} />
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full text-start flex flex-col gap-4 text-lg font-bold">
-        <h2 className="text-4xl font-extrabold leading-snug text-center my-6">
-          Calidad Garantizada y Seguridad Comprobada
-        </h2>
-        <SmallCard />
-      </div>
-    </div>
+    <PageComponent
+      calidad={andamiosColgantesData?.calidad}
+      caracteristicas={andamiosColgantesData.caracteristicas}
+      descripcion={andamiosColgantesData.descripcion}
+      images={andamiosColgantesData.images}
+      subtitle={andamiosColgantesData.subtitle}
+      title={andamiosColgantesData.title}
+    />
   );
 }
