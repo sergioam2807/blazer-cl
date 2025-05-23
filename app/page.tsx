@@ -7,7 +7,7 @@ import FadeInSection, { SubText, Ofrecemos } from "@/components/heroText";
 import Slider from "@/components/slider";
 import CardComponent from "@/components/cardComponent";
 
-const serviciosData = [
+export const serviciosData = [
   {
     title: "Andamios Colgantes",
     text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 200 metros.",

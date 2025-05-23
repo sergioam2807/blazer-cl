@@ -15,16 +15,16 @@ export default function CardComponent({
 }) {
   return (
     <Link className="block group" href={url || "#"}>
-      <Card className="py-4 bg-yellow-400 bg-opacity-60 hover:bg-opacity-100 hover:text-black transition-all duration-300 ease-in-out rounded-xl shadow-lg group">
+      <Card className="py-4 h-72 bg-yellow-400 bg-opacity-60 hover:bg-opacity-100 hover:text-black transition-all duration-300 ease-in-out rounded-xl shadow-lg group flex flex-col">
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-center gap-2">
           <h4 className="font-bold text-large uppercase group-hover:text-black">
             {title}
           </h4>
-          <p className="text-tiny font-bold group-hover:text-black text-center">
+          <p className="text-tiny font-bold group-hover:text-black text-start">
             {text}
           </p>
         </CardHeader>
-        <CardBody className="overflow-visible flex justify-center items-center py-6">
+        <CardBody className="overflow-visible flex justify-center items-center py-6 flex-1">
           <Image
             alt="Card background"
             className={

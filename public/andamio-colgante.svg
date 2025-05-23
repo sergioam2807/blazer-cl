@@ -1,0 +1,39 @@
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:none;}
+    .st1{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M287.4,300H12.6C5.7,300,0,294.3,0,287.4V12.6C0,5.7,5.7,0,12.6,0h274.9c6.9,0,12.6,5.7,12.6,12.6v274.9
+	C300,294.3,294.3,300,287.4,300z"/>
+<g>
+	<rect x="45.9" y="229.3" class="st1" width="212.2" height="25"/>
+	<line class="st1" x1="45.9" y1="239.1" x2="257.6" y2="239.1"/>
+	<line class="st1" x1="45.9" y1="249.1" x2="257.6" y2="249.1"/>
+	<line class="st1" x1="116.3" y1="230.2" x2="116.3" y2="253.8"/>
+	<line class="st1" x1="187.2" y1="230.2" x2="187.2" y2="253.8"/>
+	<polyline class="st1" points="55.9,249.3 65.7,240.1 74.5,249.2 	"/>
+	<polyline class="st1" points="87.4,249.3 97.3,240.1 106,249.2 	"/>
+	<polyline class="st1" points="128.2,249.3 138.1,240.1 146.8,249.2 	"/>
+	<polyline class="st1" points="159.7,249.3 169.6,240.1 178.3,249.2 	"/>
+	<polyline class="st1" points="197.9,249.3 207.8,240.1 216.5,249.2 	"/>
+	<polyline class="st1" points="229.4,249.3 239.3,240.1 248.1,249.2 	"/>
+	<line class="st1" x1="152.5" y1="239.9" x2="152.5" y2="249.2"/>
+	<g>
+		<line class="st1" x1="81.3" y1="35.8" x2="81.3" y2="264.1"/>
+		<rect x="68.8" y="74.1" class="st1" width="23.8" height="26.3"/>
+		<polyline class="st1" points="68.8,100.5 80.9,74.6 92.6,100.5 		"/>
+		<circle class="st1" cx="70.4" cy="103.8" r="2.5"/>
+		<circle class="st1" cx="90.9" cy="103.8" r="2.5"/>
+		<rect x="75.9" y="200.2" class="st1" width="10.4" height="10"/>
+	</g>
+	<g>
+		<line class="st1" x1="223.2" y1="35.8" x2="223.2" y2="264.1"/>
+		<rect x="210.7" y="74.1" class="st1" width="23.8" height="26.3"/>
+		<polyline class="st1" points="210.7,100.5 222.8,74.6 234.5,100.5 		"/>
+		<circle class="st1" cx="212.3" cy="103.8" r="2.5"/>
+		<circle class="st1" cx="232.8" cy="103.8" r="2.5"/>
+		<rect x="217.8" y="200.2" class="st1" width="10.4" height="10"/>
+	</g>
+</g>
+</svg>
