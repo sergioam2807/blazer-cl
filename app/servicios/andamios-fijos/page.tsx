@@ -4,8 +4,8 @@ const andamiosFijosData = {
   title: "Andamios Fijos",
   subtitle: "Solidez y seguridad para trabajos prolongados en altura.",
   images: [
-    { src: "/andamio-colgante.jpg", alt: "Andamio" },
-    { src: "/andamio-colgante.jpg", alt: "Andamio" },
+    { src: "/andamiofijo1.jpg", alt: "Andamio fijo" },
+    { src: "/andamiofijo2.jpg", alt: "Andamio" },
   ],
   descripcion: `Los andamios fijos ofrecen una solución robusta y estable para proyectos de construcción que requieren una base permanente. Ideales para trabajos prolongados en fachadas, estructuras o interiores industriales.`,
   caracteristicas: [

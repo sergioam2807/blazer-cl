@@ -4,8 +4,8 @@ const perforacionTestigueraData = {
   title: "Perforación con Testiguera",
   subtitle: "Extracción precisa de muestras geotécnicas.",
   images: [
-    { src: "/perforacion.jpg", alt: "Perforación" },
-    { src: "/perforacion.jpg", alt: "Perforación" },
+    { src: "/testiguera1.jpg", alt: "Perforación" },
+    { src: "/testiguera2.jpg", alt: "Perforación" },
   ],
   descripcion: `La perforación con testiguera permite obtener muestras cilíndricas del subsuelo para análisis geotécnicos. Ideal para estudios de suelo, obras civiles y exploración de materiales.`,
   caracteristicas: [

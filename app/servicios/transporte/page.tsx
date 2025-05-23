@@ -4,8 +4,8 @@ const transporteData = {
   title: "Servicio de Transporte",
   subtitle: "Logística eficiente y puntual para tu proyecto.",
   images: [
-    { src: "/transporte.jpg", alt: "Transporte" },
-    { src: "/transporte.jpg", alt: "Transporte" },
+    { src: "/transporte1.jpg", alt: "Transporte" },
+    { src: "/transporte3.jpg", alt: "Camion" },
   ],
   descripcion: `Ofrecemos transporte seguro y eficiente para el traslado de andamios, maquinaria y materiales a cualquier punto del país. Garantizamos tiempos de entrega y cuidado de la carga.`,
   caracteristicas: [

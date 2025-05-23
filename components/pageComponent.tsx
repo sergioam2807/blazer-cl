@@ -25,20 +25,27 @@ export const PageComponent = ({
       <HeaderPageTitle pageTitle={title} />
 
       <p className="text-2xl font-extrabold leading-snug">{subtitle}</p>
-      <div className="flex gap-4 justify-center w-full">
+      <div className="flex gap-4 justify-center w-full sm:items-center">
+        <div className="text-start flex flex-col gap-4 text-lg font-bold hidden sm:flex">
+          <p className="text-md font-light text-justify sm:text-xl">
+            {descripcion}
+          </p>
+        </div>
         {images.map((img, i) => (
           <Image
             key={i}
             alt={img.alt}
-            className="w-full object-cover opacity-70 rounded-xl"
-            height={150}
+            className="w-full object-cover rounded-xl"
+            height={200}
             src={img.src}
-            width={150}
+            width={200}
           />
         ))}
       </div>
-      <div className="text-start flex flex-col gap-4 text-lg font-bold">
-        <p className="text-md font-light text-justify">{descripcion}</p>
+      <div className="text-start flex flex-col gap-4 text-lg font-bold sm:hidden">
+        <p className="text-md font-light text-justify sm:text-xl">
+          {descripcion}
+        </p>
       </div>
 
       <div className="w-full bg-yellow-500 py-8">

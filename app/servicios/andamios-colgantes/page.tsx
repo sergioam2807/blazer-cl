@@ -4,8 +4,8 @@ const andamiosColgantesData = {
   title: "Andamios Colgantes",
   subtitle: "Andamios colgantes para trabajos en altura.",
   images: [
-    { src: "/andamio-colgante.jpg", alt: "Andamio" },
-    { src: "/andamio-colgante.jpg", alt: "Andamio" },
+    { src: "/andamio-colgante.jpg", alt: "Andamio colgante" },
+    { src: "/andamio-colgante2.jpg", alt: "Andamio" },
   ],
   descripcion: `Solución versátil y eficiente para trabajos en altura. Acceso seguro y cómodo a áreas de difícil acceso, como fachadas de edificios, techos y estructuras industriales. Ideales para trabajos de mantenimiento, limpieza, pintura y construcción.`,
   caracteristicas: [
