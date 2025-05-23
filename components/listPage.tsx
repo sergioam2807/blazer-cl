@@ -8,11 +8,11 @@ export default function ListPage({
   caracteristicas?: { title: string }[];
 }) {
   return (
-    <ul className="list-none pl-0 flex flex-col justify-center items-center gap-2">
+    <ul className="list-none px-6 pl-0 flex flex-col gap-2">
       {caracteristicas?.map((caracteristica, idx) => (
         <motion.li
           key={caracteristica.title}
-          className="flex items-center gap-2 mb-2 font-semibold text-md"
+          className="flex items-center gap-2 mb-2 font-semibold text-md px-8"
           initial={{ opacity: 0, y: 30 }}
           transition={{ duration: 0.5, delay: idx * 0.15 }}
           viewport={{ once: true, amount: 0.6 }}
