@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import SmallCard from "./smallCard";
 import ListPage from "./listPage";
@@ -25,13 +24,25 @@ export const PageComponent = ({
       <HeaderPageTitle pageTitle={title} />
 
       <p className="text-2xl font-extrabold leading-snug">{subtitle}</p>
-      <div className="flex gap-4 justify-center w-full sm:items-center">
-        <div className="text-start flex flex-col gap-4 text-lg font-bold hidden sm:flex">
+      <div className="flex gap-4 justify-center w-full sm:items-start">
+        <div className="hidden sm:flex flex-col gap-4 text-lg font-bold basis-3/5">
           <p className="text-md font-light text-justify sm:text-xl">
             {descripcion}
           </p>
         </div>
-        {images.map((img, i) => (
+        <div className="w-full flex justify-center items-center">
+          <div className="w-full max-w-20xl aspect-video">
+            <iframe
+              allowFullScreen
+              allow="autoplay; encrypted-media"
+              className="w-full aspect-video pointer-events-none rounded-xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1"
+              title="YouTube video player"
+            />
+          </div>
+        </div>
+
+        {/* {images.map((img, i) => (
           <Image
             key={i}
             alt={img.alt}
@@ -40,7 +51,7 @@ export const PageComponent = ({
             src={img.src}
             width={200}
           />
-        ))}
+        ))} */}
       </div>
       <div className="text-start flex flex-col gap-4 text-lg font-bold sm:hidden">
         <p className="text-md font-light text-justify sm:text-xl">
