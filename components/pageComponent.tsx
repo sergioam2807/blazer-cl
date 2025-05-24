@@ -11,32 +11,41 @@ export const PageComponent = ({
   descripcion,
   caracteristicas,
   calidad,
+  video,
 }: {
   title: string;
   subtitle: string;
-  images: { src: string; alt: string }[];
+  images?: { src: string; alt: string }[];
   descripcion: string;
   caracteristicas: { title: string }[];
   calidad: { titulo: string; items: { title: string }[] };
+  video?: { code: string; initialTime: number; endTime: number };
 }) => {
   return (
-    <div className="w-full flex items-start text-start px-4 py-10 flex-col gap-8">
+    <div className="w-full flex items-start text-start px-4 py-8 flex-col gap-8">
       <HeaderPageTitle pageTitle={title} />
 
-      <p className="text-2xl font-extrabold leading-snug">{subtitle}</p>
-      <div className="flex gap-4 justify-center w-full sm:items-start">
-        <div className="hidden sm:flex flex-col gap-4 text-lg font-bold basis-3/5">
-          <p className="text-md font-light text-justify sm:text-xl">
-            {descripcion}
+      <p className="sm:hidden text-2xl font-extrabold leading-snug">
+        {subtitle}
+      </p>
+      <div className="flex sn gap-4 justify-center w-full sm:items-start ">
+        <div className="flex flex-col gap-16 text-lg font-bold basis-4/5">
+          <p className="hidden sm:flex text-2xl font-extrabold leading-snug">
+            {subtitle}
           </p>
+          <div className="hidden sm:flex flex-col gap-4 text-lg font-bold basis-1/5">
+            <p className="text-md font-light text-justify sm:text-xl">
+              {descripcion}
+            </p>
+          </div>
         </div>
         <div className="w-full flex justify-center items-center">
-          <div className="w-full max-w-20xl aspect-video">
+          <div className="w-full max-w-12xl aspect-video">
             <iframe
               allowFullScreen
               allow="autoplay; encrypted-media"
-              className="w-full aspect-video pointer-events-none rounded-xl"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=0&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1"
+              className="w-full aspect-video pointer-events-none rounded-xl opacity-80"
+              src={`https://www.youtube.com/embed/${video?.code}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1&start=${video?.initialTime}&end=${video?.endTime}&loop=1&playlist=${video?.code}`}
               title="YouTube video player"
             />
           </div>

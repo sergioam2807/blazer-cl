@@ -15,6 +15,7 @@ const perforacionTestigueraData = {
     { title: "Resultados confiables para análisis técnicos." },
     { title: "Cumplimiento de estándares de calidad." },
   ],
+  video: { code: "A25E4nKH_5k", initialTime: 3, endTime: 45 },
   calidad: {
     titulo: "Precisión Técnica y Cumplimiento",
     items: [
@@ -35,6 +36,7 @@ export default function PerforacionPage() {
       images={perforacionTestigueraData.images}
       subtitle={perforacionTestigueraData.subtitle}
       title={perforacionTestigueraData.title}
+      video={perforacionTestigueraData.video}
     />
   );
 }

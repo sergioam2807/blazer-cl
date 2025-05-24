@@ -15,6 +15,7 @@ const andamiosColgantesData = {
     { title: "Capacidad de carga adecuada para trabajos pesados." },
     { title: "Estabilidad y seguridad garantizadas." },
   ],
+  video: { code: "BZV41zlN2Uc", initialTime: 3, endTime: 76 },
   calidad: {
     titulo: "Calidad Garantizada y Seguridad Comprobada",
     items: [
@@ -47,6 +48,7 @@ export default function AndamiosColgantesPage() {
       images={andamiosColgantesData.images}
       subtitle={andamiosColgantesData.subtitle}
       title={andamiosColgantesData.title}
+      video={andamiosColgantesData.video}
     />
   );
 }
