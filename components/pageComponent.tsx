@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import SmallCard from "./smallCard";
 import ListPage from "./listPage";
@@ -41,26 +42,28 @@ export const PageComponent = ({
         </div>
         <div className="w-full flex justify-center items-center">
           <div className="w-full max-w-12xl aspect-video">
-            <iframe
-              allowFullScreen
-              allow="autoplay; encrypted-media"
-              className="w-full aspect-video pointer-events-none rounded-xl opacity-80"
-              src={`https://www.youtube.com/embed/${video?.code}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1&start=${video?.initialTime}&end=${video?.endTime}&loop=1&playlist=${video?.code}`}
-              title="YouTube video player"
-            />
+            {video ? (
+              <iframe
+                allowFullScreen
+                allow="autoplay; encrypted-media"
+                className="w-full aspect-video pointer-events-none rounded-xl opacity-80"
+                src={`https://www.youtube.com/embed/${video.code}?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1&start=${video.initialTime}&end=${video.endTime}&loop=1&playlist=${video.code}`}
+                title="YouTube video player"
+              />
+            ) : (
+              images?.map((img, i) => (
+                <Image
+                  key={i}
+                  alt={img.alt}
+                  className="w-full object-cover rounded-xl mb-4"
+                  height={200}
+                  src={img.src}
+                  width={200}
+                />
+              ))
+            )}
           </div>
         </div>
-
-        {/* {images.map((img, i) => (
-          <Image
-            key={i}
-            alt={img.alt}
-            className="w-full object-cover rounded-xl"
-            height={200}
-            src={img.src}
-            width={200}
-          />
-        ))} */}
       </div>
       <div className="text-start flex flex-col gap-4 text-lg font-bold sm:hidden">
         <p className="text-md font-light text-justify sm:text-xl">
