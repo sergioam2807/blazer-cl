@@ -29,7 +29,7 @@ export const PageComponent = ({
       <p className="sm:hidden text-2xl font-extrabold leading-snug">
         {subtitle}
       </p>
-      <div className="flex sn gap-4 justify-center w-full sm:items-start ">
+      <div className="flex sn gap-4 justify-center w-full sm:items-start items-center flex-col sm:flex-row">
         <div className="flex flex-col gap-16 text-lg font-bold basis-4/5">
           <p className="hidden sm:flex text-2xl font-extrabold leading-snug">
             {subtitle}
@@ -41,7 +41,7 @@ export const PageComponent = ({
           </div>
         </div>
         <div className="w-full flex justify-center items-center">
-          <div className="w-full max-w-12xl aspect-video">
+          <div className="w-full max-w-12xl aspect-video flex">
             {video ? (
               <iframe
                 allowFullScreen
