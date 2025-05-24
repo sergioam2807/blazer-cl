@@ -28,9 +28,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           borderRadius: "8px",
         }}
       >
-        <h1>
-          Hola {userName}, {firstName} intenta contactarse contigo!👌
-        </h1>
+        <h1>Hola Blazer!, {firstName} intenta contactarse contigo!👌</h1>
         <p>Los datos del cliente son:</p>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <tbody>
