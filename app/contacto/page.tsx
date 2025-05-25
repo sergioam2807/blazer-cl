@@ -20,14 +20,20 @@ const contactos = [
   {
     icon: "/icons/phone.svg",
     alt: "Teléfono",
-    text: "+56 9 1234 5678",
-    href: "https://wa.me/56912345678",
+    text: "Servicios: +56 9 3393 3641",
+    href: "https://wa.me/56933933641",
+  },
+  {
+    icon: "/icons/phone.svg",
+    alt: "Teléfono",
+    text: "Transporte: +56 9 7383 3905",
+    href: "https://wa.me/56973833905",
   },
 ];
 
 export default function ContactoPage() {
   return (
-    <>
+    <div className="w-full flex items-start text-start px-4 py-8 flex-col gap-8">
       <HeaderPageTitle pageTitle="Contáctanos" />
 
       <div className="w-full flex flex-col sm:flex-row">
@@ -97,6 +103,6 @@ export default function ContactoPage() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
