@@ -3,7 +3,7 @@ interface EmailTemplateProps {
   correo: string;
   telefono: string;
   mensaje: string;
-  subjectEmail: string;
+  asunto: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
