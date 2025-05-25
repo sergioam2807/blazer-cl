@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import WhatsappButton from "@/components/whatsappButton";
 
 export const metadata: Metadata = {
   title: {
@@ -48,6 +49,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <WhatsappButton />
           </div>
         </Providers>
       </body>

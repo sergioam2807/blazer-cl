@@ -54,7 +54,7 @@ export default function Home() {
               as={Link}
               className="mt-12"
               color="warning"
-              href="https://github.com/heroui-inc/heroui"
+              href="/contacto"
               variant="bordered"
             >
               Contacto
@@ -84,12 +84,12 @@ export default function Home() {
 
         <div className="w-full sm:w-1/2 flex flex-col items-center justify-center px-7 py-10 relative z-10">
           <FadeInSection />
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-end mr-40">
             <Button
               as={Link}
               className="mt-12"
               color="warning"
-              href="https://github.com/heroui-inc/heroui"
+              href="/contacto"
               variant="bordered"
             >
               Contacto
