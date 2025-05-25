@@ -3,6 +3,7 @@ interface EmailTemplateProps {
   correo: string;
   telefono: string;
   mensaje: string;
+  subjectEmail: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
@@ -10,9 +11,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   correo,
   telefono,
   mensaje,
+  asunto,
 }) => {
-  const userName = process.env.NEXT_PUBLIC_RECIPIENT_NAME;
-
   return (
     <div
       style={{
@@ -32,6 +32,14 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         <p>Los datos del cliente son:</p>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <tbody>
+            <tr>
+              <td style={{ padding: "8px", border: "1px solid #ddd" }}>
+                <strong>Asunto:</strong>
+              </td>
+              <td style={{ padding: "8px", border: "1px solid #ddd" }}>
+                {asunto}
+              </td>
+            </tr>
             <tr>
               <td style={{ padding: "8px", border: "1px solid #ddd" }}>
                 <strong>Email:</strong>

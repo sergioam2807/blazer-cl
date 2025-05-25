@@ -3,12 +3,14 @@ import { Input, Textarea } from "@heroui/input";
 import { AnimatePresence } from "framer-motion";
 import { ChangeEvent, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Select, SelectItem } from "@heroui/select";
 
 interface FormData {
   nombre: string;
   correo: string;
   telefono: string;
   mensaje: string;
+  asunto: string;
 }
 
 interface FormErrors {
@@ -16,7 +18,15 @@ interface FormErrors {
   correo?: string;
   telefono?: string;
   mensaje?: string;
+  asunto?: string;
 }
+
+const asuntos = [
+  "Arriendo andamios colgantes",
+  "Arriendo andamios fijos",
+  "Arriendo testiguera",
+  "Servicio de transporte",
+];
 
 export default function MessageForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -24,12 +34,11 @@ export default function MessageForm() {
     correo: "",
     telefono: "",
     mensaje: "",
+    asunto: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -48,6 +57,8 @@ export default function MessageForm() {
     if (!formData.nombre) newErrors.nombre = "El nombre es obligatorio";
     if (!formData.correo) newErrors.correo = "El correo es obligatorio";
     if (!formData.telefono) newErrors.telefono = "El teléfono es obligatorio";
+    if (!formData.mensaje) newErrors.mensaje = "El mensaje es obligatorio";
+    if (!formData.asunto) newErrors.asunto = "El asunto es obligatorio";
 
     return newErrors;
   };
@@ -62,8 +73,6 @@ export default function MessageForm() {
     }
 
     setLoading(true);
-    setError(null);
-    setSuccess(null);
 
     try {
       const response = await fetch("/api/send", {
@@ -77,21 +86,19 @@ export default function MessageForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccess("¡Correo enviado exitosamente!");
         setFormData({
           nombre: "",
           correo: "",
           telefono: "",
           mensaje: "",
+          asunto: "",
         });
         setSuccessMessage(
           "El mensaje fue enviado y nos pondremos en contacto a la brevedad posible."
         );
-      } else {
-        setError(data.error || "Error desconocido al enviar el correo.");
       }
     } catch (err) {
-      setError("Hubo un error al intentar enviar el correo.");
+      console.log("Hubo un error al intentar enviar el correo.");
     } finally {
       setLoading(false);
     }
@@ -143,6 +150,29 @@ export default function MessageForm() {
         variant="underlined"
         onChange={handleChange}
       />
+
+      {/* Select para Asunto */}
+      <Select
+        isRequired
+        className="max-w-full"
+        errorMessage={errors.asunto}
+        isInvalid={!!errors.asunto}
+        label="Asunto"
+        placeholder="Selecciona un asunto"
+        selectedKeys={formData.asunto ? [formData.asunto] : []}
+        variant="underlined"
+        onSelectionChange={(keys) => {
+          const value = Array.from(keys)[0] as string;
+
+          setFormData((prev) => ({ ...prev, asunto: value }));
+          setErrors((prev) => ({ ...prev, asunto: undefined }));
+        }}
+      >
+        {asuntos.map((asunto) => (
+          <SelectItem key={asunto}>{asunto}</SelectItem>
+        ))}
+      </Select>
+
       <Textarea
         isRequired
         errorMessage={errors.mensaje}

@@ -10,9 +10,10 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Blazer.cl<onboarding@resend.dev>",
-      to: ["sergioam2807@gmail.com"],
+      to: ["blazer.ltda@gmail.com"],
       subject: `Hola Blazer! ${formData.nombre} intenta contactarte`,
       react: EmailTemplate({
+        asunto: formData.asunto,
         firstName: formData.nombre,
         correo: formData.correo,
         telefono: formData.telefono,
