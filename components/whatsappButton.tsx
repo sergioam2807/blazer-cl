@@ -18,7 +18,7 @@ export default function WhatsappButton() {
   return (
     <a
       aria-label="Contactar por WhatsApp"
-      className="fixed z-50 bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center transition-colors"
+      className="fixed z-50 bottom-6 right-6 opacity-80 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center transition-colors"
       href={url}
       rel="noopener noreferrer"
       target="_blank"
