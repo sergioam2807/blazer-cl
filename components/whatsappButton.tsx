@@ -5,7 +5,12 @@ const phone = "56933933641"; // Cambia por tu número
 
 const messages: Record<string, string> = {
   "/contacto": "Hola, quiero cotizar sobre sus servicios.",
-  "/transporte": "Hola, quiero cotizar sobre transporte.",
+  "/servicios/transporte": "Hola, quiero cotizar sobre transporte.",
+  "/servicios/andamios-colgantes":
+    "Hola, quiero cotizar sobre andamios colgantes.",
+  "/servicios/andamios-fijos": "Hola, quiero cotizar sobre andamios Fijos.",
+  "/servicios/perforacion":
+    "Hola, quiero cotizar sobre perforación con testiguera.",
   // Agrega más rutas y mensajes según necesites
   default: "Hola, quiero más información.",
 };
