@@ -1,7 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
 
-const phone = "56933933641"; // Cambia por tu número
+const defaultPhone = "56933933641";
+const transportePhone = "5697383905";
 
 const messages: Record<string, string> = {
   "/contacto": "Hola, quiero cotizar sobre sus servicios.",
@@ -11,13 +12,14 @@ const messages: Record<string, string> = {
   "/servicios/andamios-fijos": "Hola, quiero cotizar sobre andamios Fijos.",
   "/servicios/perforacion":
     "Hola, quiero cotizar sobre perforación con testiguera.",
-  // Agrega más rutas y mensajes según necesites
   default: "Hola, quiero más información.",
 };
 
 export default function WhatsappButton() {
   const pathname = usePathname();
   const message = messages[pathname] || messages["default"];
+  const phone =
+    pathname === "/servicios/transporte" ? transportePhone : defaultPhone;
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
