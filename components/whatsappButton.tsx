@@ -1,8 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
 
-const defaultPhone = "56933933641";
-const transportePhone = "5697383905";
+const defaultPhone = "569 33933641";
+const transportePhone = "569 73833905";
 
 const messages: Record<string, string> = {
   "/contacto": "Hola, quiero cotizar sobre sus servicios.",
