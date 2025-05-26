@@ -13,10 +13,10 @@ export default function CardComponent({
   return (
     <Card className="py-4 h-72 bg-yellow-400 bg-opacity-60 hover:bg-opacity-100 hover:text-black transition-all duration-300 ease-in-out rounded-xl shadow-lg group flex flex-col">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-center gap-2">
-        <h4 className="font-bold text-large sm:text-2xl uppercase group-hover:text-black text-center">
+        <h4 className="font-bold text-large sm:text-2xl uppercase group-hover:text-black text-center h-14 sm:h-10">
           {title}
         </h4>
-        <p className="text-tiny font-bold sm:text-center sm:text-medium group-hover:text-black text-start">
+        <p className="text-tiny font-bold sm:text-center sm:text-medium group-hover:text-black text-center">
           {text}
         </p>
       </CardHeader>
