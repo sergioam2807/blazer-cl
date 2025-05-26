@@ -5,31 +5,31 @@ import Link from "next/link";
 import andamio from "@/public/andamio-colgante.jpg";
 import FadeInSection, { SubText, Ofrecemos } from "@/components/heroText";
 import Slider from "@/components/slider";
-import CardComponent from "@/components/cardComponent";
+import AnimatedCard from "@/components/animatedCard";
 
 export const serviciosData = [
   {
     title: "Andamios Colgantes",
     text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 200 metros.",
-    icon: "/icons/colgante.png",
+    icon: "/card-images/wicosmo.jpg",
     url: "servicios/andamios-colgantes",
   },
   {
     title: "Andamios Fijos",
     text: "Arriendo de Andamios fijos para trabajos en altura, con certificación y seguridad garantizada.",
-    icon: "/icons/andamio.png",
+    icon: "/card-images/andamiofb.webp",
     url: "servicios/andamios-fijos",
   },
   {
     title: "Servicios de Perforación",
     text: "Perforación con testiguera para obtención de muestras geotécnicas.",
-    icon: "/icons/perforacion.png",
+    icon: "/card-images/testigueradms240.jpg",
     url: "servicios/perforacion",
   },
   {
     title: "Servicios de Transporte",
     text: "Transporte de equipos y materiales a cualquier lugar del país.",
-    icon: "/icons/transporte.png",
+    icon: "/card-images/aumark6.jpg",
     url: "servicios/transporte",
   },
 ];
@@ -63,7 +63,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Solo visible en desktop */}
       <div className="hidden sm:flex w-full flex-col sm:flex-row relative mb-16">
         <div className="w-full sm:w-1/2 relative">
           <Image
@@ -79,7 +78,6 @@ export default function Home() {
           {/* Esquina inferior derecha */}
           <div className="absolute bottom-0 right-0 w-12 h-1 bg-yellow-500 rounded-br-lg" />
           <div className="absolute bottom-0 right-0 w-1 h-12 bg-yellow-500 rounded-br-lg" />
-          {/* <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/90 to-transparent" /> */}
         </div>
 
         <div className="w-full sm:w-1/2 flex flex-col items-center justify-center px-7 py-10 relative z-10">
@@ -106,12 +104,12 @@ export default function Home() {
           <div className="bg-black w-full text-start py-12 px-8 sm:mb-16">
             <SubText />
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
               {serviciosData.map((card, index) => (
-                <CardComponent
+                <AnimatedCard
                   key={index}
-                  icon={card.icon}
-                  text={card.text}
+                  img={card.icon}
+                  subtitle={card.text}
                   title={card.title}
                   url={card.url}
                 />
