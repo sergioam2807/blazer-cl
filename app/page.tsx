@@ -6,6 +6,7 @@ import andamio from "@/public/andamio-colgante.jpg";
 import FadeInSection, { SubText, Ofrecemos } from "@/components/heroText";
 import Slider from "@/components/slider";
 import AnimatedCard from "@/components/animatedCard";
+import FlipCardComponent from "@/components/projectCard";
 
 export const serviciosData = [
   {
@@ -122,6 +123,9 @@ export default function Home() {
         </div>
         <div className="bg-gradient-to-b from-gray-200 to-white w-full text-center sm:mt-16 ">
           <Slider />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-8 sm:bg-black bg-white">
+            <FlipCardComponent />
+          </div>
         </div>
       </section>
       <Ofrecemos />
