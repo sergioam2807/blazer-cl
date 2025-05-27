@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-import AnimatedCard from "./animatedCard";
+import CardComponent from "./cardComponent";
 
 export default function FadeInSection() {
   return (
@@ -60,101 +60,40 @@ export function Ofrecemos() {
         un equipo comprometido con la seguridad y eficiencia de cada proyecto.
       </motion.p>
 
-      <div className="grid grid-cols-1 px-8 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-8 max-w-4xl mx-auto px-8">
         {[
           {
             title: "Experiencia",
             description:
               "Más de 11 años en el mercado, brindando soluciones efectivas.",
-            img: "card-images/andamio-colgante-card.jpg",
+            img: "/icons/experiencia.png",
           },
           {
             title: "Múltiples Clientes",
             description:
               "Confianza de empresas líderes en el sector de la construcción.",
-            img: "card-images/clientes.jpg",
+            img: "/icons/trust.svg",
           },
           {
             title: "Trabajos de Calidad",
             description:
               "Proyectos exitosos garantizados por nuestro equipo especializado.",
-            img: "card-images/calidad.jpg",
+            img: "/icons/compliance.svg",
           },
           {
             title: "Sevicio de Transporte",
             description:
               "Transporte de equipos y materiales a cualquier lugar del país.",
-            img: "card-images/transporte.jpg",
+            img: "/icons/transporte.png",
           },
-          {
-            title: "Buen Stock de Productos",
-            description:
-              "Disponibilidad inmediata de andamios y maquinarias para su proyecto.",
-            img: "card-images/stock.jpg",
-          },
-        ].map((item, idx, arr) => {
-          const isLastTwoStart = arr.length % 3 === 2 && idx === arr.length - 2;
-
-          if (isLastTwoStart) {
-            return (
-              <>
-                <div key={`mobile-last-1-${idx}`} className="w-full lg:hidden">
-                  <AnimatedCard
-                    delay={idx * 0.15}
-                    img={item.img}
-                    subtitle={item.description}
-                    title={item.title}
-                  />
-                </div>
-                <div
-                  key={`mobile-last-2-${idx + 1}`}
-                  className="w-full lg:hidden"
-                >
-                  <AnimatedCard
-                    delay={(idx + 1) * 0.15}
-                    img={arr[idx + 1].img}
-                    subtitle={arr[idx + 1].description}
-                    title={arr[idx + 1].title}
-                  />
-                </div>
-
-                <div
-                  key={`desktop-last-two-${idx}`}
-                  className="col-span-full hidden lg:flex justify-around gap-8"
-                >
-                  {[item, arr[idx + 1]].map((cardItem, i) => (
-                    <div
-                      key={`desktop-card-${idx + i}`}
-                      className="w-full lg:w-[32%]"
-                    >
-                      <AnimatedCard
-                        delay={(idx + i) * 0.15}
-                        img={cardItem.img}
-                        subtitle={cardItem.description}
-                        title={cardItem.title}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </>
-            );
-          }
-
-          const isLastExtra = arr.length % 3 === 2 && idx === arr.length - 1;
-
-          if (isLastExtra) return null;
-
-          return (
-            <div key={`normal-card-${idx}`} className="w-full">
-              <AnimatedCard
-                delay={idx * 0.15}
-                img={item.img}
-                subtitle={item.description}
-                title={item.title}
-              />
-            </div>
-          );
-        })}
+        ].map((item, idx) => (
+          <CardComponent
+            key={idx}
+            icon={item.img}
+            text={item.description}
+            title={item.title}
+          />
+        ))}
       </div>
     </section>
   );
