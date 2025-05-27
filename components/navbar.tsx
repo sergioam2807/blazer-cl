@@ -9,9 +9,9 @@ import {
 } from "@heroui/navbar";
 import { Link } from "@heroui/link";
 import NextLink from "next/link";
+import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
-import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   return (
@@ -22,7 +22,13 @@ export const Navbar = () => {
             className="flex justify-start items-center gap-1 text-black"
             href="/"
           >
-            <Logo />
+            <Image
+              alt="Blazer Logo"
+              className=""
+              height={58}
+              src="/blazerlogo.png"
+              width={58}
+            />
             <p className="font-bold text-inherit">Blazer</p>
           </NextLink>
         </NavbarBrand>
