@@ -60,7 +60,7 @@ export function Ofrecemos() {
         un equipo comprometido con la seguridad y eficiencia de cada proyecto.
       </motion.p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 gap-8 max-w-4xl mx-auto px-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {[
           {
             title: "Experiencia",
@@ -76,8 +76,7 @@ export function Ofrecemos() {
           },
           {
             title: "Trabajos de Calidad",
-            description:
-              "Proyectos exitosos garantizados por nuestro equipo especializado.",
+            description: "Garantizados por nuestro equipo especializado.",
             img: "/icons/compliance.svg",
           },
           {
