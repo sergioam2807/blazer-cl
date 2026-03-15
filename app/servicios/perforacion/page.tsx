@@ -1,7 +1,7 @@
 import { PageComponent } from "@/components/pageComponent";
 
 const perforacionTestigueraData = {
-  title: "Perforación con Testiguera",
+  title: "Servicio de perforacion en losas muros",
   subtitle: "Extracción precisa de muestras geotécnicas.",
   images: [
     { src: "/testiguera1.jpg", alt: "Perforación" },

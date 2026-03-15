@@ -15,7 +15,7 @@ const transporteData = {
     { title: "Cuidado y seguridad en el transporte de equipos." },
     { title: "Coordinación logística puntual." },
   ],
-  video: { code: "TWGosdhYVp4", initialTime: 3, endTime: 76 },
+  video: { code: "dwOs82SX8CU", initialTime: 10, endTime: 76 },
   calidad: {
     titulo: "Transporte Seguro y Confiable",
     items: [

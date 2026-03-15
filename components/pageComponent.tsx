@@ -51,16 +51,18 @@ export const PageComponent = ({
                 title="YouTube video player"
               />
             ) : (
-              images?.map((img, i) => (
-                <Image
-                  key={i}
-                  alt={img.alt}
-                  className="w-full object-cover rounded-xl mb-4"
-                  height={200}
-                  src={img.src}
-                  width={200}
-                />
-              ))
+              <div className="w-full max-w-12xl aspect-video flex gap-2">
+                {images?.map((img, i) => (
+                  <Image
+                    key={i}
+                    alt={img.alt}
+                    className="w-full object-cover rounded-xl mb-4"
+                    height={200}
+                    src={img.src}
+                    width={200}
+                  />
+                ))}
+              </div>
             )}
           </div>
         </div>

@@ -11,7 +11,7 @@ const messages: Record<string, string> = {
     "Hola, quiero cotizar sobre andamios colgantes.",
   "/servicios/andamios-fijos": "Hola, quiero cotizar sobre andamios Fijos.",
   "/servicios/perforacion":
-    "Hola, quiero cotizar sobre perforación con testiguera.",
+    "Hola, quiero cotizar sobre servicio de perforación.",
   default: "Hola, quiero más información.",
 };
 
