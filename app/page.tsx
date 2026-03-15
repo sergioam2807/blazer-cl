@@ -11,7 +11,7 @@ import FlipCardComponent from "@/components/projectCard";
 export const serviciosData = [
   {
     title: "Andamios Colgantes",
-    text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 200 metros.",
+    text: " Arriendo de andamios colgantes eléctricos certificados para alturas de hasta 100 metros.",
     icon: "/card-images/wicosmo.jpg",
     url: "servicios/andamios-colgantes",
   },

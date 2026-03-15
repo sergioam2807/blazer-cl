@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Blazer",
+  name: "Servicios Blazer",
   description:
     "Empresa dedicada a servicios de andamios y mantenimiento de edificios.",
   navItems: [
@@ -21,7 +21,10 @@ export const siteConfig = {
           label: "Arriendo Andamios Colgantes",
           href: "/servicios/andamios-colgantes",
         },
-        { label: "Arriendo Andamios Fijos", href: "/servicios/andamios-fijos" },
+        {
+          label: "Arriendo y Venta Andamios Fijos",
+          href: "/servicios/andamios-fijos",
+        },
         {
           label: "Servicios de Perforación con Testiguera",
           href: "/servicios/perforacion",

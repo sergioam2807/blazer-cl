@@ -29,7 +29,7 @@ export const Navbar = () => {
               src="/blazerlogo.png"
               width={58}
             />
-            <p className="font-bold text-inherit">Blazer</p>
+            <p className="font-bold text-inherit">Servicios Blazer</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>

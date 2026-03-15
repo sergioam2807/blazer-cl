@@ -21,14 +21,15 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold mb-2">Contacto</h4>
           <p>Blazer.ltda@gmail.com</p>
-          <p>+56 9 1234 5678</p>
+          <p>Blaser Andamios Ltda : +56 9 3393 3641</p>
+          <p>Transporte : +56 9 1234 5678</p>
           <p>Viña del mar, Chile</p>
         </div>
         <div>
           <h4 className="font-bold mb-2">Síguenos</h4>
           <div className="flex gap-3">
             <Link
-              href="https://www.facebook.com/p/Blazer-Andamios-100008934150281/?locale=es_LA"
+              href="https://www.facebook.com/share/14V7LVnKfHv/?locale=es_LA"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -41,7 +42,7 @@ export const Footer = () => {
               />
             </Link>
             <Link
-              href="https://www.instagram.com/serviciosblazerltda?igsh=cmd4dW04enlvaGVn"
+              href="https://www.instagram.com/serviciosblazerltda?igsh=MWM2dnJ1cHB3cHhnOQ=="
               rel="noopener noreferrer"
               target="_blank"
             >
