@@ -51,15 +51,11 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col items-center justify-center px-7">
           <FadeInSection />
           <div className="w-full flex justify-end">
-            <Button
-              as={Link}
-              className="mt-12"
-              color="warning"
-              href="/contacto"
-              variant="bordered"
-            >
-              Contacto
-            </Button>
+            <Link href="/contacto">
+              <Button className="mt-12" color="warning" variant="bordered">
+                Contacto
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -84,7 +80,12 @@ export default function Home() {
         <div className="w-full sm:w-1/2 flex flex-col items-center justify-center px-7 py-10 relative z-10">
           <FadeInSection />
           <div className="w-full flex justify-end mr-40">
-            <Button
+            <Link href="/contacto">
+              <Button className="mt-12" color="warning" variant="bordered">
+                Contacto
+              </Button>
+            </Link>
+            {/* <Button
               as={Link}
               className="mt-12"
               color="warning"
@@ -92,7 +93,7 @@ export default function Home() {
               variant="bordered"
             >
               Contacto
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
