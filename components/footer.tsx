@@ -21,8 +21,8 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold mb-2">Contacto</h4>
           <p>Blazer.ltda@gmail.com</p>
-          <p>Blaser Andamios Ltda : +56 9 3393 3641</p>
-          <p>Transporte : +56 9 1234 5678</p>
+          <p>Blazer Andamios Ltda : +56 9 3393 3641</p>
+          <p>Transporte : +56 9 7383 3905</p>
           <p>Viña del mar, Chile</p>
         </div>
         <div>
