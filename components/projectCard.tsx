@@ -3,24 +3,24 @@ import Image from "next/image";
 
 const proyectosData = [
   {
-    title: "Edificio Central",
-    img: "/proyects/andamio-colgante2.jpg",
+    title: "Salinas del Mar II",
+    img: "/proyects/salinas-del-mar.jpeg",
     hito: "Montaje de andamios colgantes en tiempo récord para fachada principal.",
   },
   {
-    title: "Hospital Regional",
-    img: "/proyects/andamiofijo2.jpg",
+    title: "Mirador del Lago",
+    img: "/proyects/mirador-del-lago.jpeg",
     hito: "Solución de acceso seguro para trabajos en altura en pabellones.",
   },
   {
-    title: "Centro Comercial Plaza",
-    img: "/proyects/transporte1.jpg",
-    hito: "Instalación de andamios colgantes para renovación de fachadas.",
+    title: "Vista uno Norte",
+    img: "/proyects/vista-uno-norte.jpeg",
+    hito: "Montaje de andamios colgantes para trabajos de mantenimiento.",
   },
   {
-    title: "Edificio Corporativo",
-    img: "/proyects/transporte2.jpg",
-    hito: "Montaje de andamios colgantes para trabajos de mantenimiento.",
+    title: "Edificio Alessandri",
+    img: "/proyects/edificio-alessandri-1.jpeg",
+    hito: "Instalación de andamios colgantes para renovación de fachadas.",
   },
 ];
 
