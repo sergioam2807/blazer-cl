@@ -5,21 +5,25 @@ const proyectosData = [
   {
     title: "Salinas del Mar II",
     img: "/proyects/salinas-del-mar.jpeg",
+    imgBack: "/proyects/salinas-del-mar-2.jpeg",
     hito: "Montaje de andamios colgantes en tiempo récord para fachada principal.",
   },
   {
     title: "Mirador del Lago",
     img: "/proyects/mirador-del-lago.jpeg",
+    imgBack: "/proyects/mirador-del-lago-2.jpeg",
     hito: "Solución de acceso seguro para trabajos en altura en pabellones.",
   },
   {
     title: "Vista uno Norte",
     img: "/proyects/vista-uno-norte.jpeg",
+    imgBack: "/proyects/vista-uno-norte-2.jpeg",
     hito: "Montaje de andamios colgantes para trabajos de mantenimiento.",
   },
   {
     title: "Edificio Alessandri",
     img: "/proyects/edificio-alessandri-1.jpeg",
+    imgBack: "/proyects/edificio-alessandri-2.jpeg",
     hito: "Instalación de andamios colgantes para renovación de fachadas.",
   },
 ];
@@ -61,6 +65,13 @@ export default function FlipCardComponent() {
                   {/* Back Face */}
 
                   <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <Image
+                      alt={proyect.title}
+                      className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-30"
+                      height={220}
+                      src={proyect.imgBack}
+                      width={220}
+                    />
                     <div className="flex min-h-full flex-col items-center justify-center">
                       <h2 className="text-2xl font-bold mb-4">
                         {proyect.title}

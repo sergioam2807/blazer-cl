@@ -26,7 +26,7 @@ export const siteConfig = {
           href: "/servicios/andamios-fijos",
         },
         {
-          label: "Servicios de Perforación con Testiguera",
+          label: "Servicio de perforacion en losas muros",
           href: "/servicios/perforacion",
         },
         {
