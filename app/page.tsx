@@ -20,10 +20,11 @@ export const serviciosData = [
     text: "Arriendo de Andamios fijos para trabajos en altura, con certificación y seguridad garantizada.",
     icon: "/card-images/andamiofb.webp",
     url: "servicios/andamios-fijos",
+    badge: "Próximamente",
   },
   {
     title: "Servicios de Perforación",
-    text: "Perforación con testiguera para obtención de muestras geotécnicas.",
+    text: "Perforación con testiguera en losas y muros",
     icon: "/card-images/testigueradms240.jpg",
     url: "servicios/perforacion",
   },
@@ -110,6 +111,7 @@ export default function Home() {
               {serviciosData.map((card, index) => (
                 <AnimatedCard
                   key={index}
+                  badge={card.badge}
                   img={card.icon}
                   subtitle={card.text}
                   title={card.title}
