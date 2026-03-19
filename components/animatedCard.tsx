@@ -11,6 +11,7 @@ interface AnimatedCardProps {
   img: string;
   delay?: number;
   url?: string;
+  badge?: string;
 }
 
 export default function AnimatedCard({
@@ -19,25 +20,32 @@ export default function AnimatedCard({
   img,
   delay = 0,
   url,
+  badge,
 }: AnimatedCardProps) {
   const [hovered, setHovered] = useState(false);
 
   const cardContent = (
     <motion.div
-      className="transition-transform duration-300"
+      className="relative transition-transform duration-300"
       initial={{ opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
     >
       <Card
-        className="bg-yellow-500 w-[300px] h-[350px] pb-4 transition-all duration-300 overflow-hidden flex flex-col"
+        className="relative bg-yellow-500 w-[300px] h-[350px] pb-4 transition-all duration-300 overflow-hidden flex flex-col"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
+        {badge && (
+          <div className="absolute top-4 -left-8 w-56 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full shadow-lg z-30 rotate-[-30deg] text-center pointer-events-none">
+            {badge}
+          </div>
+        )}
         <CardBody className="bg-white p-0 flex justify-center items-center h-[250px] w-full overflow-hidden rounded-none">
           <motion.div
             animate={{ scale: hovered ? 0.8 : 1 }}
+            className="relative"
             transition={{ duration: 0.3 }}
           >
             <Image
